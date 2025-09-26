@@ -117,6 +117,9 @@ export function ContactSection() {
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <Card className="p-8 bg-card text-card-foreground">
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot anti-spam */}
+                <input type="text" name="_gotcha" style={{ display: "none" }} />
+                
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
