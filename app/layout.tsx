@@ -9,8 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Nikolaus Marvin Liayasa - Portfolio",
   description:
-    "Personal portfolio of Han Nguyen - Computer Science student passionate about AI, Web Development, and UI/UX Design",
-  generator: "v0.app",
+    "Personal portfolio of Nikolaus Marvin Liayasa - Computer Science student passionate about AI, Web Development, and UI/UX Design"
 }
 
 export default function RootLayout({
