@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -7,6 +8,33 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react"
 
 export function ContactSection() {
+  const [status, setStatus] = useState<"idle" | "success" | "error" | "loading">("idle")
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setStatus("loading")
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      const response = await fetch("https://formspree.io/f/mwprpgpj", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      })
+
+      if (response.ok) {
+        setStatus("success")
+        form.reset() // kosongkan form setelah sukses
+      } else {
+        setStatus("error")
+      }
+    } catch (err) {
+      setStatus("error")
+    }
+  }
+
   return (
     <section id="contact" className="py-20 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,13 +116,13 @@ export function ContactSection() {
           {/* Contact Form */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <Card className="p-8 bg-card text-card-foreground">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name
                     </label>
-                    <Input id="name" placeholder="Your name" className="bg-input border-border" />
+                    <Input id="name" name="name" placeholder="Your name" className="bg-input border-border" required />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -102,9 +130,11 @@ export function ContactSection() {
                     </label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="your.email@example.com"
                       className="bg-input border-border"
+                      required
                     />
                   </div>
                 </div>
@@ -112,7 +142,7 @@ export function ContactSection() {
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject
                   </label>
-                  <Input id="subject" placeholder="Project inquiry" className="bg-input border-border" />
+                  <Input id="subject" name="subject" placeholder="Project inquiry" className="bg-input border-border" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -120,14 +150,26 @@ export function ContactSection() {
                   </label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Tell me about your project..."
                     rows={5}
                     className="bg-input border-border"
+                    required
                   />
                 </div>
-                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                  Send Message
+
+                {/* Submit Button */}
+                <Button type="submit" disabled={status === "loading"} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                  {status === "loading" ? "Sending..." : "Send Message"}
                 </Button>
+
+                {/* Status Messages */}
+                {status === "success" && (
+                  <p className="text-green-500 text-sm mt-2">✅ Your message has been sent successfully!</p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-500 text-sm mt-2">❌ Oops! Something went wrong. Please try again.</p>
+                )}
               </form>
             </Card>
           </div>
