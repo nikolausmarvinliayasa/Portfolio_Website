@@ -44,6 +44,8 @@ const projects = [
     technologies: ["Figma"],
     liveUrl: "#",
     githubUrl: "https://drive.google.com/drive/folders/18I5WS1aoTP5CMRI-mDsPZ36TG2Wfnutc?usp=sharing",
+    buttonLabel: "Source Link",
+    buttonIcon: null,
   },
 ]
 
@@ -126,8 +128,8 @@ export function PortfolioSection() {
                             className="border-forest-green text-forest-green hover:bg-forest-green hover:text-white px-6 py-2 rounded-full font-medium transition-all duration-300 bg-transparent"
                             onClick={() => window.open(project.githubUrl, "_blank")}
                           >
-                            <Github className="w-4 h-4 mr-2" />
-                            Source Code
+                            {project.buttonIcon !== null && <Github className="w-4 h-4 mr-2" />}
+                            {project.buttonLabel || "Source Code"}
                           </Button>
                         </div>
                       </div>
