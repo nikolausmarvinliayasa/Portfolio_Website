@@ -75,7 +75,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-medium">Location</div>
-                    <div className="opacity-90">South Tangerang, South Tangerang City, Banten, Indonesia</div>
+                    <div className="opacity-90">South Tangerang City, Banten</div>
                   </div>
                 </div>
               </div>

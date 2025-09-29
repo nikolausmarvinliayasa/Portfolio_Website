@@ -59,7 +59,7 @@ I can contribute positively in any activity I participate in.
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center space-x-2">
                       <MapPin size={16} />
-                      <span>{"South Tangerang, South Tangerang City, Banten"}</span>
+                      <span>{"South Tangerang City, Banten"}</span>
                     </div>
                     <div>{"nikolaus.liayasa@binus.ac.id"}</div>
                     <div>+62 896 2048 1422  </div>
