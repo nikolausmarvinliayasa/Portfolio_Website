@@ -208,8 +208,7 @@ throughout the ESEE 1 and ESEE 2 program at Bina Nusantara University
                     year: "2022",
                     title: "Bronze Medalist | 7th OPSILON Mathematics Olympiad",
                     desc: [
-                      "Developed an application design focused on education and elections using an interactive and user-friendly UI/UX approach.",
-                      "Improved collaboration, problem solving, and understanding of user-centric design principles"
+                      "Awarded Bronze Medal for outstanding problem-solving and analytical skills in a national-level mathematics competition."
                     ]
                   }
                 ].map((activity, idx) => (
