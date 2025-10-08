@@ -21,6 +21,7 @@ export function ResumeSection() {
                     <div className="text-secondary font-bold">2023 - Now</div>
                     <h3 className="font-bold text-lg">Bina Nusantara University</h3>
                     <p className="text-muted-foreground">Bachelor's degree, Computer Science</p>
+                    <p className="text-muted-foreground">Grade: 3.83</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
