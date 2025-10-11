@@ -138,9 +138,40 @@ export function HeroSection() {
               >
                 <Instagram size={20} />
               </Button>
+              {/* View CV button */}
+              <Button
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold hover:scale-105 transition-all duration-200 shadow-md"
+                style={{
+                  backgroundColor: "#F4A300", // kuning emas
+                  color: "#2E3B29",           // hijau tua teks
+                  borderRadius: "8px",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#D89000" // kuning sedikit lebih tua saat hover
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#F4A300"
+                }}
+                onClick={() => window.open("/CV_NikolausMarvinLiayasa.pdf", "_blank")}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 11V3m0 8L8 7m4 4l4-4m-6 8h6m2 2a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2h6"
+                  />
+                </svg>
+                <span>View CV</span>
+              </Button>
             </div>
           </div>
-
           <div className="lg:col-span-5 relative animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <div className="relative">
               {/* Profile image with enhanced styling */}
