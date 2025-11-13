@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export function ResumeSection() {
   return (
@@ -47,17 +48,14 @@ export function ResumeSection() {
                       <div className="text-white font-bold">2025 - Now</div>
                       <h3 className="font-bold text-lg">Scholarship Mentor</h3>
                       <p className="text-sm opacity-90 text-justify">Mentored students in various Computer Science and related courses, including Data Mining, Compilation Techniques, and Geographical Information Systems, and etc. Guiding mentees individually and in group settings, offering review sessions and Q&A discussions to help prepare for midterms and finals.</p>
-                      <p className="text-sm opacity-90 text-justify">Strengthened communication, teaching, and leadership skills while deepening my own understanding of technical subjects through teaching others. Discovered that mentoring is not only about academic guidance but also about fostering confidence, critical thinking, and collaborative growth among mentees.
-</p>
+                      <p className="text-sm opacity-90 text-justify">Strengthened communication, teaching, and leadership skills while deepening my own understanding of technical subjects through teaching others. Discovered that mentoring is not only about academic guidance but also about fostering confidence, critical thinking, and collaborative growth among mentees.</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-3 h-3 bg-white rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <div className="text-white font-bold">2024 - 2025</div>
-                      <h3 className="font-bold text-lg">Bina Nusantara University Freshmen Partner
-
-</h3>
+                      <h3 className="font-bold text-lg">Bina Nusantara University Freshmen Partner</h3>
                       <p className="text-sm opacity-90 text-justify">
                         Mentored new students (Freshmen) at Bina Nusantara
 University for one year. Responsible for assisting with
@@ -85,11 +83,17 @@ throughout the ESEE 1 and ESEE 2 program at Bina Nusantara University
                   <Badge variant="outline" className="border-white text-white">
                     #Adaptability
                   </Badge>
+                  <div className="mt-10 text-center">
+                    <Link href="/more/experiences">
+                      <button className="px-6 py-3 rounded-full bg-white text-secondary font-semibold hover:bg-secondary hover:text-white transition-all shadow-md">
+                        View More Experiences →
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </Card>
             </div>
           </div>
-
           {/* Right side - Skills & Languages */}
           <div className="space-y-12">
             {/* Technical Skills */}
@@ -227,7 +231,14 @@ throughout the ESEE 1 and ESEE 2 program at Bina Nusantara University
                   </div>
                 ))}
               </div>
-
+              <div className="mt-10 text-center">
+                <Link href="/more/activities">
+                  <button className="px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-semibold hover:bg-primary hover:text-white transition-all shadow-md">
+                    View More Activities →
+                  </button>
+                </Link>
+              </div>              
+                {/* Activities Button */}
               <div className="mt-8">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2">
