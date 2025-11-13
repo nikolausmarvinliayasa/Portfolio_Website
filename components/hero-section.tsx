@@ -152,7 +152,7 @@ export function HeroSection() {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "#F4A300"
                 }}
-                onClick={() => window.open("/CV_NikolausMarvinLiayasa.pdf", "_blank")}
+                onClick={() => window.open("/CV ATS - Nikolaus Marvin Liayasa.pdf", "_blank")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
