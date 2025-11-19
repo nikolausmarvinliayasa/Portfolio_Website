@@ -47,6 +47,18 @@ const projects = [
     buttonLabel: "Source Link",
     buttonIcon: null,
   },
+  {
+    id: 5,
+    title: "Project-Based Internship : Big Data Analytics at Kimia Farma by Rakamin Academy",
+    description:
+      "I completed a data analytics project using Google BigQuery and Looker Studio as part of the Kimia Farma Business Performance Analysis program. My responsibilities included importing and preparing multiple datasets, joining transactional and operational data, writing optimized SQL queries to generate analytical tables, and calculating business metrics such as net sales, profit, and gross margin. I also designed a comprehensive interactive dashboard in Looker Studio, featuring KPI summaries, trend analysis, branch performance comparisons, and geographical profit insights. Through this project, I strengthened my technical skills in SQL, cloud data warehousing, ETL processing, and data visualization, while gaining practical experience in translating raw business data into meaningful insights for decision-making.",
+    image: "",
+    technologies: ["Looker Studio", "Google BigQuery"],
+    liveUrl: "#",
+    githubUrl: "https://drive.google.com/drive/folders/1H4JgQVLXhEr021XzeXaP28MtvB6MxIaN?usp=sharing",
+    buttonLabel: "Source Link",
+    buttonIcon: null,
+  },
 ]
 
 export function PortfolioSection() {
