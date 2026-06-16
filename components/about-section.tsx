@@ -16,7 +16,7 @@ export function AboutSection() {
                 I'm Marvin!
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I am a fifth-semester student who is enthusiastic and
+                I am a sixth-semester student who is enthusiastic and
 passionate about learning and participating in various activities
 that can support my development. By joining various activities, I
 can train both soft skills and hard skills to become even better. I

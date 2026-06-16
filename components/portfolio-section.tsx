@@ -51,7 +51,7 @@ const projects = [
     id: 5,
     title: "Project-Based Internship : Big Data Analytics at Kimia Farma by Rakamin Academy",
     description:
-      "I completed a data analytics project using BigQuery and Looker Studio, where I prepared multiple datasets, wrote optimized SQL queries, and built analytical tables to calculate key business metrics. I also created an interactive dashboard with KPIs, trends, and branch insights. This project strengthened my skills in SQL, cloud data warehousing, ETL, and data visualization.",
+      "I completed a data analytics project using BigQuery and Looker Studio, where I prepared multiple datasets, wrote optimized SQL queries, and built analytical tables to calculate key business metrics. I also created an interactive dashboard with KPIs, trends, and branch insights. This project strengthened my skills in SQL, cloud data warehousing, ETL, and data visualization.\n\nThis project was completed in November 2025",
     image: "visualisasi-rakamin-bi.png",
     technologies: ["Looker Studio", "Google BigQuery"],
     liveUrl: "#",
